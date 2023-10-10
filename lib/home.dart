@@ -26,28 +26,28 @@ class _EmiCalculatorState extends State<EmiCalculator> {
             Container(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
-              color: Color(0xff2A2B31),
+              color: const Color(0xff2A2B31),
             ),
             Container(
                 height: 50,
                 width: 50,
-                margin: EdgeInsets.only(left: 5, top: 40),
-                padding: EdgeInsets.all(5),
-                decoration: BoxDecoration(
+                margin: const EdgeInsets.only(left: 5, top: 40),
+                padding: const EdgeInsets.all(5),
+                decoration: const BoxDecoration(
                   color: Color(0xff222529),
                   shape: BoxShape.circle,
                 ),
                 child: IconButton(
                     onPressed: () {},
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.arrow_back_ios_new_sharp,
                       color: Colors.white70,
                       shadows: [Shadow(color: Colors.white, blurRadius: 50)],
                     ))),
             Container(
-              margin: EdgeInsets.only(top: 53, left: 20),
+              margin: const EdgeInsets.only(top: 53, left: 20),
               alignment: Alignment.topCenter,
-              child: Text(
+              child: const Text(
                 "EMI Calculator",
                 style: TextStyle(
                   color: Colors.white,
@@ -57,9 +57,9 @@ class _EmiCalculatorState extends State<EmiCalculator> {
             ),
             Container(
               width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.only(top: 140, left: 2),
-              padding: EdgeInsets.all(15),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.only(top: 140, left: 2),
+              padding: const EdgeInsets.all(15),
+              decoration: const BoxDecoration(
                   color: Color(0xff252A31),
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(30),
@@ -74,7 +74,7 @@ class _EmiCalculatorState extends State<EmiCalculator> {
               child: Column(
                 children: [
                   Slider(
-                      activeColor: Color(0xffBB868F),
+                      activeColor: const Color(0xffBB868F),
                       inactiveColor: Colors.white,
                       value: p,
                       max: 100000,
@@ -86,17 +86,18 @@ class _EmiCalculatorState extends State<EmiCalculator> {
                   Row(
                     children: [
                       Container(
-                        margin: EdgeInsets.only(left: 22),
-                        child: Text(
+                        margin: const EdgeInsets.only(left: 22),
+                        child: const Text(
                           "Loan Amount",
                           style: TextStyle(color: Colors.grey, fontSize: 18),
                         ),
                       ),
+                      Spacer(),
                       Container(
-                          margin: EdgeInsets.only(left: 130),
+                          margin: const EdgeInsets.only(right: 22),
                           child: Text(
                             "₹ ${p.toStringAsFixed(1)}",
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: Color(0xffBB868F),
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
@@ -106,7 +107,7 @@ class _EmiCalculatorState extends State<EmiCalculator> {
                   Padding(
                     padding: const EdgeInsets.only(top: 20),
                     child: Slider(
-                        activeColor: Color(0xffBB868F),
+                        activeColor: const Color(0xffBB868F),
                         inactiveColor: Colors.white,
                         value: r,
                         max: 16,
@@ -120,17 +121,18 @@ class _EmiCalculatorState extends State<EmiCalculator> {
                   Row(
                     children: [
                       Container(
-                        margin: EdgeInsets.only(left: 22),
-                        child: Text(
+                        margin: const EdgeInsets.only(left: 22),
+                        child: const Text(
                           "Rate of Interest",
                           style: TextStyle(color: Colors.grey, fontSize: 18),
                         ),
                       ),
+                      Spacer(),
                       Container(
-                          margin: EdgeInsets.only(left: 150),
+                          margin: const EdgeInsets.only(right: 22),
                           child: Text(
                             "${r.toStringAsFixed(1)} %",
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: Color(0xffBB868F),
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600),
@@ -140,7 +142,7 @@ class _EmiCalculatorState extends State<EmiCalculator> {
                   Padding(
                     padding: const EdgeInsets.only(top: 20),
                     child: Slider(
-                        activeColor: Color(0xffBB868F),
+                        activeColor: const Color(0xffBB868F),
                         inactiveColor: Colors.white,
                         value: n,
                         max: 24,
@@ -153,17 +155,18 @@ class _EmiCalculatorState extends State<EmiCalculator> {
                   Row(
                     children: [
                       Container(
-                        margin: EdgeInsets.only(left: 22),
-                        child: Text(
+                        margin: const EdgeInsets.only(left: 22),
+                        child: const Text(
                           "Loan tenure",
                           style: TextStyle(color: Colors.grey, fontSize: 18),
                         ),
                       ),
+                      Spacer(),
                       Container(
-                          margin: EdgeInsets.only(left: 130),
+                          margin: const EdgeInsets.only(right: 22),
                           child: Text(
                             "${n.toStringAsFixed(1)} Months",
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Color(0xffBB868F),
                               fontSize: 18,
                               fontWeight: FontWeight.w600,
@@ -177,23 +180,25 @@ class _EmiCalculatorState extends State<EmiCalculator> {
                         Container(
                           height: 180,
                           width: 180,
-                          margin: EdgeInsets.only(top: 30),
-                          decoration: BoxDecoration(
+                          margin: const EdgeInsets.only(top: 30),
+                          decoration: const BoxDecoration(
                               color: Colors.white, shape: BoxShape.circle),
                         ),
                         Container(
                             height: 100,
                             width: 100,
-                            margin: EdgeInsets.only(top: 30),
-                            decoration: BoxDecoration(
+                            margin: const EdgeInsets.only(top: 30),
+                            decoration: const BoxDecoration(
                                 color: Color(0xff2A2B31),
                                 shape: BoxShape.circle)),
                       ]),
+                      Spacer(),
                       Padding(
-                        padding: const EdgeInsets.only(left: 70, top: 30),
+                        padding: const EdgeInsets.only(right: 22, top: 30),
                         child: Text(
                           "EMI\n₹ ${(p * R * pow((1 + R), n) / (pow((1 + R), n) - 1)).toStringAsFixed(2)}",
-                          style: TextStyle(
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
                               color: Colors.white,
                               fontSize: 22,
                               fontWeight: FontWeight.w700),
@@ -204,26 +209,27 @@ class _EmiCalculatorState extends State<EmiCalculator> {
                   Row(
                     children: [
                       Container(
-                        margin: EdgeInsets.only(
+                        margin: const EdgeInsets.only(
                           top: 20,
                         ),
                         height: 35,
                         width: 35,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Color(0xffBB868F), shape: BoxShape.circle),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 20, left: 10),
+                      const Padding(
+                        padding: EdgeInsets.only(top: 20, left: 10),
                         child: Text(
                           "Principal Amount",
                           style: TextStyle(color: Colors.grey, fontSize: 18),
                         ),
                       ),
+                      Spacer(),
                       Padding(
-                        padding: const EdgeInsets.only(left: 62, top: 20),
+                        padding: const EdgeInsets.only(right: 22, top: 20),
                         child: Text(
                           "₹ ${p.toStringAsFixed(2)}",
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Colors.white,
                               fontSize: 20,
                               fontWeight: FontWeight.w600),
@@ -234,26 +240,27 @@ class _EmiCalculatorState extends State<EmiCalculator> {
                   Row(
                     children: [
                       Container(
-                        margin: EdgeInsets.only(
+                        margin: const EdgeInsets.only(
                           top: 20,
                         ),
                         height: 35,
                         width: 35,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Colors.white, shape: BoxShape.circle),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 20, left: 10),
+                      const Padding(
+                        padding: EdgeInsets.only(top: 20, left: 10),
                         child: Text(
                           "Total interest",
                           style: TextStyle(color: Colors.grey, fontSize: 18),
                         ),
                       ),
+                      Spacer(),
                       Padding(
-                        padding: const EdgeInsets.only(left: 110, top: 20),
+                        padding: const EdgeInsets.only(right: 22, top: 20),
                         child: Text(
                           "₹ ${(((p * R * pow((1 + R), n) / (pow((1 + R), n) - 1)) * n) - p).toStringAsFixed(2)}",
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Colors.white,
                               fontSize: 20,
                               fontWeight: FontWeight.w600),
@@ -263,8 +270,8 @@ class _EmiCalculatorState extends State<EmiCalculator> {
                   ),
                   Row(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 30, left: 5),
+                      const Padding(
+                        padding: EdgeInsets.only(top: 30, left: 5),
                         child: Text(
                           "Total",
                           style: TextStyle(
@@ -274,11 +281,12 @@ class _EmiCalculatorState extends State<EmiCalculator> {
                           ),
                         ),
                       ),
+                      Spacer(),
                       Padding(
-                        padding: const EdgeInsets.only(left: 195, top: 30),
+                        padding: const EdgeInsets.only(right: 22, top: 30),
                         child: Text(
                           "₹ ${((p * R * pow((1 + R), n) / (pow((1 + R), n) - 1)) * n).toStringAsFixed(2)}",
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Colors.white,
                               fontSize: 20,
                               fontWeight: FontWeight.w600),
